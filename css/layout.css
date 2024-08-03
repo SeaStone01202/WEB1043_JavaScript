@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+.container {
+    width: 85%;         
+    margin: 0 auto;        
+    position: relative;    
+}
+
+body {
+    margin: 0;             
+    padding: 0;            
+}
+
+.mau{
+    background-color: whitesmoke;
+    line-height: 40px;
+}
+
+.banner img{
+    width: 100%;
+    height: 700px;
+}
+
+img {
+    display: block; 
+    width: 100%;
+    margin: 0; 
+    padding: 0; 
+}
+
+.container1{
+    clear: both;
+    background-color: black;
+    text-align: center;
+    line-height: 55px;
+}
+
+.container1 a{
+    color: white;
+    padding: 0 40px;
+    text-decoration: none;
+}
+
+.container1 a:hover{
+    color: orange;
+}

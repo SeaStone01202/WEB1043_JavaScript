@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+
+.sanphambanchay{
+    width: 70%;
+    margin: 0 auto;
+    float: left;
+}
+
+body {
+    margin: 0;                  /* Xóa margin mặc định của body */
+    padding: 0;                 /* Xóa padding mặc định của body */
+}
+
+.col-25 {
+    width: 25%;                 /* Chiều rộng 25% của container */
+    float: left;                /* Đặt phần tử con ở trái */
+}
+
+.column{
+    margin: 5px;
+    padding: 5px;
+    height: 540px;
+    text-align: center;
+}
+
+.column .column1:hover{
+    border: 5px solid cyan;     /* Viền của phần tử khi di chuột vào */
+    box-shadow: 0 0 5px red;    /* Hiển thị bóng đổ khi di chuột vào */
+}
+
+.column1{
+    border: 1px dotted black;
+    margin-bottom: 15px;
+}
+
+.column .column1 .hinh img{
+    max-width: 100%;
+}
+
+.column .column1 .icon a{
+    text-decoration: none;
+    color: white;
+}
+
+.column .column1 .icon{
+    background-color: red;
+    line-height: 40px;
+}
+
+.column .column1 .icon a:hover{
+    color: yellow;
+}
+
+.column .ten{
+    margin-bottom: 15px;
+}
+
+.column .ten a{
+    text-decoration: none;
+    color: black;
+}
+
+.column .ten a:hover{
+    color: orange;
+}
+
+.column .gia strong{
+    color: red;
+}
+.gia{
+    margin-bottom: 10px;
+}

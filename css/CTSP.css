@@ -1,0 +1,66 @@
+.CTSP-50 {
+    width: 50%;
+    margin: 50px;
+}
+
+.hinhnhoCTSP{
+    display: flex;
+}
+
+.hinhnhoCTSP img{
+    border: 1px solid rgb(233, 230, 230);
+}
+
+.hinhnhoCTSP div{
+    padding: 5px;
+}
+
+.CTSP-50 > .hinhnhoCTSP > img{
+    width: 25%;
+}
+
+.mausac div{
+    width: 50px; 
+    height: 50px; 
+    background-color: black; 
+    margin-right: 10px;
+}
+
+.kichthuoc a{
+    width: 50px; 
+    height: 40px; 
+    border: 1px solid blanchedalmond; 
+    text-align: center; 
+    padding-top: 10px; 
+    margin-right: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.themvamua a{
+    border: 1px solid red;
+    width: 194.5px;
+    height: 45px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.themvamua .themvaogio{
+    text-align: center;
+    padding-top: 13px;
+    color: red;
+}
+
+.themvamua #themvaogio:hover{
+    background-color: red;
+}
+
+#themvaogio:hover .themvaogio{
+    color: white;
+}
+
+.themvamua .muangay{
+    text-align: center;
+    padding-top: 13px;
+    color: white;
+}

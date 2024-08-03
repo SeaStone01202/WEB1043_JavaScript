@@ -1,0 +1,52 @@
+.footer {
+    padding: 20px 0;
+    background-color: #f1f1f1;
+    clear: both;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px; /* Khoảng cách giữa các .box */
+}
+
+.footer .box, .footer .box1, .footer .box2 {
+    padding: 20px;
+    margin: 10px 0;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.footer .box h3, .footer .box1 h4, .footer .box2 h4 {
+    margin-top: 0;
+}
+
+.footer .box1 a, .footer .box2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.box1 a:hover{
+    color: orangered;
+}
+
+.box2 a:hover{
+    color: blue;
+    text-decoration:underline;
+}
+
+.box3 {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.box3 a {
+    color: white;
+    text-decoration: none;
+}

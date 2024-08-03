@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SẢN PHẨM</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/Sanpham.css">
+</head>
+<body>
+    <div class="container">
+        <header class="menu">
+            <ul>
+                <li>
+                    <a href="ASM.html">Sản phẩm</a>
+                    <ul>
+                        <li><a href="#">Giày Cao Gót</a></li>
+                        <li><a href="#">Loafer</a></li>
+                        <li><a href="#">MARY JANE</a></li>
+                        <li><a href="#">Giày Boot Cổ Thấp</a></li>
+                        <li><a href="#">Giày Boot Cổ Cao</a></li>
+                        <li><a href="#">Oxford</a></li>
+                        <li><a href="#">Lolita</a></li>
+                        <li><a href="#">Sandals</a></li>
+                        <li><a href="#">Dép</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sale off</a></li>
+                <li><a href="#">Bộ sưu tập</a>
+                    <ul>
+                        <li><a href="#">SANDALS ĐẾ CAO</a></li>
+                        <li><a href="#"><strong>SPECIAL COLLECTION</strong></a></li>
+                        <li><a href="#"><strong>RESTOCK TIME</strong></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Giới thiệu</a>
+                    <ul>
+                        <li><a href="#">Về Tiệm Giày Boot</a></li>
+                        <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
+                        <li><a href="#">Chính Sách Thanh Toán</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tin tức</a></li>
+                
+            </ul>
+            <div class="icon1">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="icon">
+                <a href="#"><img src="img/icon-search.svg" alt=""></a>
+                <a href="giohang.html"><img src="img/icon-giohang.svg" alt=""></a>
+                <span id="sosp" class="sosp" style="color: blue; font-size: 30px; position: absolute; top: 7px; right: 21px;">0</span>
+            </div>
+        </header>
+    </div>
+    
+    <div class="banner">
+        <img id="img" onclick="changeImage()" src="img/HinhToLon.png" alt="Không có hình">
+        <script>
+            var index = 1;
+            changeImage = function(){
+                var imgs = ['HinhToLon2.png', 'HinhToLon.png'];
+                document.getElementById('img').src = '/ASM/img/' + imgs[index];
+                index++;
+                if(index == 2){
+                    index = 0;
+                }
+            }
+            setInterval(changeImage, 3000);
+        </script>
+        <button style="position: absolute; top: 450px; left: 0;" onclick="prevSlide()">&#10094</button>
+        <button style="position: absolute; top: 450px; right: 0;" onclick="nextSlide()">&#10095</button>
+    </div>
+    
+    <div class="mau">
+        <div class="container">
+            <nav>
+                <div class="nav">
+                    <a href="index.html">Trang chủ</a> / <a href="#" style="color: red;">Sản phẩm</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="text-align: center;"><strong>SẢN PHẨM</strong></h1>
+        <div id="productContainer"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <p>Mua hàng online: 035 3869 543</p>
+                <p>Liên hệ hợp tác Marketing: tiemgiayboot9x@gmail.com</p>
+                <p>Chăm sóc khách hàng: 035 3869 543</p>
+                <p>Thời gian làm việc: Thứ 2 đến thứ 7 từ 8h30 đến 17h30</p>
+                <p>Địa chỉ: Tất cả các chi nhánh hệ thống cửa hàng.</p>
+                <p>Copyright © 2023 <strong style="color: red;">TIEMGIAYBOOT</strong>. All rights reserved. Design by Nina Co.,Ltd</p>
+            </div>
+            <div class="box1">
+                <h4>CHÍNH SÁCH</h4>
+                <a href="#">Chính sách trả hàng</a><br><br>
+                <a href="#">Chính sách bảo hành</a><br><br>
+                <a href="#">Chính sách mua hàng</a><br><br>
+                <a href="#">Chính sách người dùng</a>
+            </div>
+            <div class="box2">
+                <h4>FANPAGE CỦA CHÚNG TÔI</h4>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+        
+    </footer>
+    <div class="box3">
+        <div class="tiem">
+            <a href="#">Về Tiệm giày Boot</a>
+        </div>
+        <div class="baomat">
+            <a href="#">Chính sách bảo mật thông tin</a>
+        </div>
+        <div class="thanhtoan">
+            <a href="#">Chính sách thanh toán</a>
+        </div>
+    </div>
+</body>
+<script src="js/sanpham.js"></script>
+</html>
