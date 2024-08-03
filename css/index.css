@@ -1,137 +1,216 @@
+/* Menu */
 .menu {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #FFFFFF; /* Màu chữ */
-    background-color: #44612D; /* Màu nền của menu */
-    display: flex;
-    justify-content: center; /* Căn giữa tất cả nội dung */
-    align-items: center;
-    padding: 10px 20px; /* Thêm padding cho menu */
-    position: relative; /* Để có thể căn chỉnh icon */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #FFFFFF; 
+  background-color: #44612D; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 10px 20px; 
+  position: relative; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .menu ul {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Căn giữa các mục trong ul */
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 
 .menu li {
-    margin: 0 15px; /* Khoảng cách giữa các item */
+  margin: 0 15px; 
 }
 
 .menu img {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: auto; /* Để giữ tỷ lệ cho hình ảnh logo */
 }
 
 .menu li a {
-    color: #FFFFFF; /* Màu chữ */
-    font-size: 16px; /* Kích thước chữ */
-    text-decoration: none;
-    transition: color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+  color: #FFFFFF; 
+  font-size: 16px; 
+  text-decoration: none;
+  transition: color 0.3s; 
 }
 
 .menu li a:hover {
-    color: #FFC107; /* Đổi màu chữ khi hover */
+  color: #FFC107;
+  text-shadow: 0 0 5px #FFC107;
 }
 
-/* Thêm class cho icon */
 .menu .icon {
-    margin-left: 20px; /* Khoảng cách giữa các item và icon */
+  margin-left: 20px; 
 }
 
-/* Đối với icon */
 .menu .icon a {
-    font-size: 24px; /* Kích thước icon */
-    color: #FFFFFF; /* Màu icon */
+  font-size: 24px; 
+  color: #FFFFFF; 
 }
 
 .menu .icon a:hover {
-    color: #FFC107; /* Đổi màu icon khi hover */
+  color: #FFC107; 
 }
 
-/* Thêm container cho các icon để đẩy chúng về bên phải */
-.icon-container {
-    display: flex; /* Dùng flex để căn giữa các icon */
-    margin-left: auto; /* Đẩy các icon về bên phải */
-}
-
- /* Banner */
-
+/* Slider */
 .slider {
-    width: 1800px;
-    max-width: 100vw;
-    height: 700px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-  }
-  .list {
-    margin-top: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    display: flex;
-    width: max-content;
-    transition: 1s;
-  }
-  .list img {
-    width: 1800px;
-    max-width: 100vw;
-    height: 100%;
-    object-fit: cover;
-  }
-  .buttons {
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .buttons button {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff5;
-    color: #fff;
-    border: none;
-    font-family: monospace;
-    font-weight: bold;
-  }
-  .dots {
-    position: absolute;
-    bottom: 10px;
-    color: white;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  .dots li {
-    cursor: pointer;
-    list-style: none;
-    width: 10px;
-    height: 10px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    transition: 1s;
-  }
-  .dots li.active {
-    width: 30px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .slider {
-      height: 500px;
-    }
-  }
+  width: 100%;
+  max-width: 1800px;
+  height: 700px;
+  margin: 20px auto; /* Thêm margin để cách đều giữa các phần */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Thêm bo tròn cho slider */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
 
-  /* Banner */
+.list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  transition: transform 1s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+.list .item {
+  min-width: 100%; /* Để mỗi slide chiếm toàn bộ chiều rộng */
+}
+
+.list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Thêm bo tròn cho hình ảnh */
+}
+
+.buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #444;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px; /* Cách với đáy slider */
+  color: white;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dots li {
+  cursor: pointer;
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px; /* Cách giữa các dots */
+  background-color: #fff;
+  border-radius: 50%; /* Bo tròn hoàn toàn */
+  transition: transform 0.3s;
+}
+
+.dots li.active {
+  transform: scale(1.5); /* Tăng kích thước của dot đang hoạt động */
+}
+
+/* Center */
+#center {
+  display: flex; 
+  flex-direction: column; /* Đặt chiều dọc cho tiêu đề và sản phẩm */
+  justify-content: center; 
+  align-items: center;
+  padding: 20px; /* Thêm padding cho khu vực giữa */
+}
+
+#center h1 {
+  font-size: 2.5rem; /* Kích thước tiêu đề lớn hơn */
+  margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và sản phẩm */
+  color: #333; /* Màu tiêu đề nổi bật hơn */
+}
+
+.showProduct {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  padding: 20px; 
+}
+
+.items {
+  width: 200px; 
+  margin: 10px; 
+  text-align: center; 
+  background-color: #f9f9f9; /* Nền cho từng sản phẩm */
+  border-radius: 10px; /* Bo tròn cho sản phẩm */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  transition: transform 0.3s; /* Hiệu ứng khi hover */
+}
+
+.items:hover {
+  transform: translateY(-5px); /* Nâng lên khi hover */
+}
+
+.items img {
+  width: 100%; /* Để hình ảnh có chiều rộng 100% của item */
+  height: auto; /* Chiều cao tự động để giữ tỷ lệ */
+  border-radius: 10px 10px 0 0; /* Bo tròn cho phần trên hình ảnh */
+}
+
+.items .title {
+  font-weight: bold; 
+  margin: 10px 0; 
+  color: #333; /* Màu tiêu đề sản phẩm */
+}
+
+.items .price {
+  color: #d9534f; /* Màu giá nổi bật */
+  font-size: 1.2rem; /* Kích thước giá lớn hơn */
+  margin: 5px 0; 
+}
+
+.items button {
+  cursor: pointer;
+  background-color: #44612D; /* Màu nền của nút */
+  color: #FFFFFF; /* Màu chữ của nút */
+  border: none; 
+  border-radius: 5px; /* Bo tròn cho nút */
+  padding: 10px 15px; /* Thêm padding cho nút */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.items button:hover {
+  background-color: #FFC107; /* Màu nền khi hover */
+  color: #333; /* Màu chữ khi hover */
+}
+
+/* Footer */
+.footer {
+  height: 100px; /* Chiều cao footer */
+  background-color: #44612D; /* Màu nền của footer */
+  color: #FFFFFF; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 14px; /* Kích thước chữ footer nhỏ hơn */
+}
