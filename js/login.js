@@ -8,39 +8,44 @@ let users = [
   }
 ];
 
+// Lưu danh sách người dùng vào localStorage
 localStorage.setItem('users', JSON.stringify(users));
 localStorage.setItem('isLogin', doLogin);
 
-// login
+// Hàm hiển thị modal đăng nhập
 function showLogin() {
   document.getElementById('loginModal').style.display = 'block';
 }
 
+// Hàm đóng modal đăng nhập
 function closeLogin() {
   document.getElementById('loginModal').style.display = 'none';
 }
 
+// Hàm hiển thị modal đăng ký
 function showRegister() {
   document.getElementById('registerModal').style.display = 'block';
 }
 
+// Hàm đóng modal đăng ký
 function closeRegister() {
   document.getElementById('registerModal').style.display = 'none';
 }
 
-function checkLogin(){
-  let doLoginIsActive = sessionStorage.getItem('isLogin');
-  doLogin = parseInt(doLoginIsActive);
-  if(!doLogin){
+// Hàm kiểm tra trạng thái đăng nhập
+function checkLogin() {
+  let doLoginIsActive = localStorage.getItem('isLogin');
+  if (doLoginIsActive !== true) {
     Swal.fire({
       icon: 'error',
       title: 'Error',
-      text: 'Chưa đăng nhập, làm sao mua hàng ?'
+      text: 'Chưa đăng nhập, làm sao mua hàng?'
     });
     showLogin();
   }
 }
 
+// Hàm kiểm tra tên đăng nhập và mật khẩu
 function checkUsernamePassword() {
   const username = users[0].username;
   const password = users[0].password;
@@ -67,6 +72,7 @@ function checkUsernamePassword() {
   }
 }
 
+// Hàm cập nhật menu người dùng
 function updateUserMenu(username) {
   let userMenuContent = document.getElementById('loginMenu');
   userMenuContent.innerHTML = `
@@ -75,6 +81,7 @@ function updateUserMenu(username) {
   `;
 }
 
+// Hàm đăng xuất
 function logout() {
   let userMenuContent = document.getElementById('loginMenu');
   userMenuContent.innerHTML = `
@@ -82,10 +89,11 @@ function logout() {
           <a href="#" onclick="showRegister()">Register</a>
   `;
   doLogin = false;
-  localStorage.setItem('isLogin', doLogin);
+  localStorage.setItem('isLogin', doLogin); // Lưu trạng thái đăng xuất
   Swal.fire({
       icon: 'success',
       title: 'Success',
       text: 'Bạn đã đăng xuất!'
   });
 }
+
