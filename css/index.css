@@ -205,11 +205,10 @@
 
 /* Footer */
 .footer {
-  height: 100px; /* Chiều cao footer */
-  background-color: #44612D; /* Màu nền của footer */
+  padding: 50px;
+  height: auto; /* Chiều cao footer */
+  background-color: #152331eb; /* Màu nền của footer */
   color: #FFFFFF; 
-  display: flex; 
-  justify-content: center; 
   align-items: center; 
   font-size: 14px; /* Kích thước chữ footer nhỏ hơn */
 }

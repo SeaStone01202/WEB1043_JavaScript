@@ -1,0 +1,28 @@
+table{
+    margin: 50px 0;
+}
+
+table img{
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 20px 20px;
+}
+table strong{
+    color: red;
+}
+
+table button{
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    background-color: aqua;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+table button:hover{
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+}
