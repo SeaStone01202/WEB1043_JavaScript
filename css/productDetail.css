@@ -1,0 +1,123 @@
+/* Định dạng phần chi tiết sản phẩm */
+.product-detail {
+    display: flex;
+    margin: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    margin-left: 20px;
+}
+
+.product-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 22px;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantity-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+/* Định dạng phần mô tả */
+#center {
+    width: 80%;
+    margin: auto;
+}
+
+#center h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#center p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#center ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#center ul li {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Định dạng phần mô tả chi tiết */
+#center div:nth-of-type(2) {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#center div:nth-of-type(2) p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#center div:nth-of-type(2) ul {
+    margin-top: 20px;
+}
+
+#center div:nth-of-type(2) ul li {
+    margin-bottom: 10px;
+}

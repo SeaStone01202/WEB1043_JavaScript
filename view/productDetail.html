@@ -7,6 +7,7 @@
   <title>index</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/WEB1043_JavaScript/css/index.css">
+  <link rel="stylesheet" href="/WEB1043_JavaScript/css/productDetail.css">
 </head>
 
 <body>
@@ -57,9 +58,72 @@
       </ul>
     </div>
 
-    <div id="center">
-
+    <div class="mau">
+      <nav>
+        <div class="nav">
+          <a href="/WEB1043_JavaScript/index.html">Trang chủ</a> / <a href="#">Sản phẩm</a> / <a href="/WEB1043_JavaScript/view/productDetail.html" style="color: red;">Chi tiết sản phẩm</a> 
+        </div>
+      </nav>
     </div>
+
+    <div id="center">
+      <div class="product-detail">
+        <div class="product-image">
+          <img src="https://cailonuong.com/wp-content/uploads/2024/07/trungthu-1_1-800x1200.jpg" alt="Product Image">
+        </div>
+        <div class="product-info">
+          <h1 class="product-name">Hộp trung thu Như Ý</h1>
+          <p class="product-price">Giá: 500.000 VND</p>
+          <p>Hộp quà Như Ý gồm có:</p>
+          <ul>
+            <li>– Bánh bạch liên tôm ngũ vị</li>
+            <li>– Bánh thập cẩm xá xíu thượng hạng</li>
+            <li>– Bánh hoa hồng nhân ổi xá lị</li>
+            <li>– Bánh táo đỏ kỷ tử</li>
+            <li>– Trà ôlong </li>
+          </ul>
+          <p>Trọng lượng bánh: 150gram/bánh.</p>
+          <div class="quantity">
+            <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+            <input type="number" id="quantity-input" value="1" min="1">
+            <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+          </div>
+          <button class="add-to-cart">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+      <hr>
+      <br>
+      <div>
+        <h1>MO TA</h1>
+        <p>MÙA TRĂNG THƯỞNG THỨC TINH HOA</p>
+        <p>ĐẬM ĐÀ BẢN SẮC, NHÀ NHÀ ĐOÀN VIÊN </p>
+        <p>Cái Lò Nướng trân trọng giới thiệu Bộ sưu tập Bánh Trung thu TINH HOA lấy cảm hứng từ Làng nghề truyền thống với mong muốn lan tỏa, tôn vinh bản sắc văn hoá Việt, tôn vinh những nghệ nhân ở các làng nghề khắp mọi miền đất nước, mang thông điệp một mùa Trung thu sum vầy đậm đà tinh hoa Việt.</p>
+        <p>Những nghệ nhân làng nghề truyền thống đã truyền cảm hứng cho những thợ bánh giỏi nghề của Cái Lò Nướng đặt hết tâm sức, nỗ lực không ngừng tạo nên những chiếc bánh thơm ngon tròn vị cho mùa trăng năm nay.</p>
+        <p>Bộ sưu tập “TINH HOA” bao gồm bảy vị bánh độc đáo từ hình thức đến hương vị. Các nguyên liệu được chọn lựa kỹ lưỡng từ nông sản Việt như ổi xá lị, hoa sen trắng, đậu xanh, quả quất, trần bì… cùng với hải sản và xá xíu thượng hạng, hứa hẹn mang đến một bữa tiệc trăng trọn vẹn, đầy màu sắc.</p>
+        <ul>
+          <li>Bánh bạch liên tôm ngũ vị</li>
+          <li>Bánh thập cẩm hải sản sốt XO</li>
+          <li>Bánh thập cẩm xá xíu thượng hạng</li>
+          <li>Bánh hoa hồng nhân ổi xá lị</li>
+          <li>Bánh tinh than tre hoàng kim</li>
+          <li>Bánh táo đỏ kỷ tử</li>
+          <li>Bánh tắc muối trần bì</li>
+        </ul>
+        <p>Cái Lò Nướng đã hoàn thiện công thức độc quyền kết hợp với quy trình sản xuất hiện đại để kiểm soát độ ẩm của bánh, giúp bánh luôn mềm dẻo và giữ được hương vị thơm ngon đặc trưng. Chúng mình đặt tâm huyết trong từng chiếc bánh để mỗi hộp quà đến tay khách hàng đều là trải nghiệm tinh tế xuyên suốt.</p>
+        <p>Bộ Hộp quà mang đậm bản sắc văn hóa Việt được lấy cảm hứng từ các làng nghề truyền thống: Làng trống Đọi Tam, Làng gốm Bát Tràng, Làng lồng đèn Phú Bình, Làng nón lá Chuông… Thiết kế hộp với các chi tiết dân gian sống động, màu sắc và các tầng cắt lớp tinh tế thể hiện sự chăm chút của Cái Lò Nướng cho bộ quà tặng mùa Trung thu 2024.</p>
+        <ul>
+          <li>Tiệm bán lẻ bánh theo từng vị, đóng gói trong các set quà 2-4-6 bánh</li>
+          <li>Nhận đặt hàng theo yêu cầu Doanh nghiệp</li>
+          <li>SHIP BÁNH TOÀN QUỐC</li>
+        </ul>
+        <p>Đặt hàng ngay hôm nay để cùng gia đình đón mùa Trăng trọn vẹn với những chiếc bánh Tinh Hoa bạn nhé!</p>
+        <p>Chúc bạn và gia đình một mùa Trung thu đoàn viên, an yên thưởng nguyệt.</p>
+      </div>
+        <br>
+        <hr>
+    </div>
+    
+    
 
     <div class="footer">
       <div>
@@ -81,8 +145,9 @@
     </div>
   </div>
 
-  <script src="js/slider.js"></script>
-  <script src="js/index.js"></script>
+  <script src="/WEB1043_JavaScript/js/slider.js"></script>
+  <script src="/WEB1043_JavaScript/js/index.js"></script>
+  <script src="/WEB1043_JavaScript/js/productDetail.js"></script>
 </body>
 
 </html>

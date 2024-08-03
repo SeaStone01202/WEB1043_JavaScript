@@ -20,7 +20,16 @@
           <li><a href="#">KHACH HANG THAN THIET</a></li>
           <li><a href="#">LIEN HE</a></li>
           <li><a href="#">BLOG</a></li>
-          <li class="icon"><a href="#"><i class="fa fa-user" style="font-size:36px"></i></a></li>
+          <li class="icon">
+            <a href="#" onmouseover="showDropdown()" onmouseout="hideDropdown()">
+              <i class="fa fa-user" style="font-size:36px"></i>
+            </a>
+            <div class="login-menu" id="loginMenu">
+              <a href="#" onclick="showLogin()">Login</a>
+              <a href="#" onclick="showRegister()">Register</a>
+            </div>
+          </li>
+
           <li class="icon"><a href="/WEB1043_JavaScript/view/cart.html"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a></li>
         </ul>
       </div>
@@ -57,11 +66,19 @@
       </ul>
     </div>
 
+    <div class="mau">
+      <nav>
+        <div class="nav">
+          <a href="/WEB1043_JavaScript/index.html" style="color: red;">Trang chủ</a> 
+        </div>
+      </nav>
+    </div>
+
     <div id="center">
       <h1>SAN PHAM UA CHUONG</h1>
       <div class="showProduct">
         <div class="items">
-          <a href="product-detail.html">
+          <a href="/WEB1043_JavaScript/view/productDetail.html">
             <img src="https://cailonuong.com/wp-content/uploads/2024/07/trungthu-1_1-800x1200.jpg">
             <div class="title">Hộp trung thu Như Ý</div>
             <div class="price">595.000</div>
@@ -92,7 +109,6 @@
             <button style="cursor: pointer;">Them vao gio hang</button>
           </a>
         </div>
-
       </div>
     </div>
 
@@ -116,8 +132,56 @@
     </div>
   </div>
 
-  <script src="js/slider.js"></script>
-  <script src="js/index.js"></script>
+      <!-- Bảng đăng nhập -->
+      <div class="login">
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLogin()">&times;</span>
+                <h2>Đăng Nhập</h2>
+                <form action="post" onsubmit="event.preventDefault(); checkLogin();">
+                    <label for="username">Tên đăng nhập:</label>
+                    <br>
+                    <input type="text" id="username" name="username">
+                    <br>
+                    <label for="password">Mật khẩu:</label>
+                    <br>
+                    <input type="password" id="password" name="password">
+                    <br>
+                    <a href="#"><label for="forget">Quên mật khẩu?</label></a>
+                    <br>
+                    <input type="submit" value="Đăng nhập">
+                </form>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Bảng đăng ký -->
+    <div class="register">
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeRegister()">&times;</span>
+                <h2>Đăng Ký</h2>
+                <form action="post">
+                    <label for="regUsername">Tên đăng nhập:</label>
+                    <br>
+                    <input type="text" id="regUsername" name="regUsername">
+                    <br>
+                    <label for="regPassword">Mật khẩu:</label>
+                    <br>
+                    <input type="password" id="regPassword" name="regPassword">
+                    <br>
+                    <label for="confirmPassword">Nhập lại mật khẩu:</label>
+                    <br>
+                    <input type="password" id="confirmPassword" name="confirmPassword">
+                    <br>
+                    <input type="submit" value="Đăng ký">
+                </form>
+            </div>
+        </div>
+    </div>
+  <script src="/WEB1043_JavaScript/js/slider.js"></script>
+  <script src="/WEB1043_JavaScript/js/index.js"></script>
+  <script src="/WEB1043_JavaScript/js/login.js"></script>
 </body>
 
 </html>
