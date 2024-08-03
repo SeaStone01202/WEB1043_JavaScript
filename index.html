@@ -3,392 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRANG CHỦ</title>
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/Sanpham.css">
-    <link rel="stylesheet" href="css/aside.css">
+    <title>index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="container">
-        <header class="menu">
-            <ul>
-                <li>
-                    <a href="ASM.html" target="page">Sản phẩm</a>
-                    <ul>
-                        <li><a href="#">Giày Cao Gót</a></li>
-                        <li><a href="#">Loafer</a></li>
-                        <li><a href="#">MARY JANE</a></li>
-                        <li><a href="#">Giày Boot Cổ Thấp</a></li>
-                        <li><a href="#">Giày Boot Cổ Cao</a></li>
-                        <li><a href="#">Oxford</a></li>
-                        <li><a href="#">Lolita</a></li>
-                        <li><a href="#">Sandals</a></li>
-                        <li><a href="#">Dép</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" target="page">Sale off</a></li>
-                <li><a href="#" target="page">Bộ sưu tập</a>
-                    <ul>
-                        <li><a href="#">SANDALS ĐẾ CAO</a></li>
-                        <li><a href="#"><strong>SPECIAL COLLECTION</strong></a></li>
-                        <li><a href="#"><strong>RESTOCK TIME</strong></a></li>
-                    </ul>
-                </li>
-                <li><a href="#" target="page">Giới thiệu</a>
-                    <ul>
-                        <li><a href="#">Về Tiệm Giày Boot</a></li>
-                        <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
-                        <li><a href="#">Chính Sách Thanh Toán</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" target="page">Tin tức</a></li>
-                
+        <div id="header">
+            <div class="menu">
+                <ul>
+                    <li><a href="#"><img src="https://cailonuong.com/wp-content/uploads/2024/04/logo.png#30392" alt=""></a></li>
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li><a href="#">MENU BANH</a></li>
+                    <li><a href="#">KHACH HANG THAN THIET</a></li>
+                    <li><a href="#">LIEN HE</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li class="icon"><a href="#"><i class="fa fa-user" style="font-size:36px"></i></a></li>
+                    <li class="icon"><a href="#"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slider">
+            <div class="list">
+              <div class="item"><img src="https://m.yodycdn.com/fit-in/filters:format(webp)/fit-in/filters:format(webp)/products/lyzi5ia8l5h5uis64681920x864.jpg" alt="Slide 1"></div>
+              <div class="item"><img src="https://m.yodycdn.com/fit-in/filters:format(webp)/fit-in/filters:format(webp)/products/lyzi593msvj2bbvh659237_HERO%20PC%20copy.png" alt="Slide 2"></div>
+              <div class="item"><img src="https://m.yodycdn.com/fit-in/filters:format(webp)/fit-in/filters:format(webp)/products/lwynjo4x321gxw5hyq9__232-1920x864%20(1).png" alt="Slide 3"></div>
+              <div class="item"><img src="https://m.yodycdn.com/fit-in/filters:format(webp)/fit-in/filters:format(webp)/products/lyzi4evj8szadtp24wq237_HERO%20PC.png" alt="Slide 4"></div>
+              <div class="item"><img src="./images/6.jpg" alt="Slide 5"></div>
+            </div>
+            <div class="buttons">
+              <button id="prev"> <</button>
+              <button id="next">></button>
+            </div>
+            <ul class="dots">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
-            <div class="icon1">
-                <a href="index.html"><img src="img/logo.png" alt=""></a>
-            </div>
-            <div class="icon">
-                <a href="#"><img src="img/icon-search.svg" alt=""></a>
-                <a href="#"><img src="img/icon-giohang.svg" alt=""></a>
-            </div>
-        </header>
+          </div>
+
+        <div id="center">
+            
+        </div>
+
+        <div class="footer"></div>
     </div>
 
-    <div class="banner">
-        <img id="img" onclick="changeImage()" src="https://m.yodycdn.com/fit-in/filters:format(webp)/fit-in/filters:format(webp)/products/lyzi593msvj2bbvh659237_HERO%20PC%20copy.png" alt="Không có hình">
-        <script>
-            var index = 1;
-            changeImage = function(){
-                var imgs = ['https://m.yodycdn.com/fit-in/filters:format(webp)/fit-in/filters:format(webp)/products/lwynjo4x321gxw5hyq9__232-1920x864%20(1).png', 'https://m.yodycdn.com/fit-in/filters:format(webp)/fit-in/filters:format(webp)/products/lz0ldn0in7np0xf4g4hero_banner_hang_moi_ve_1920x864.png'];
-                document.getElementById('img').src = imgs[index];
-                index++;
-                if(index == 2){
-                    index = 0;
-                }
-            }
-            setInterval(changeImage, 3000);
-        </script>
-    </div>
-
-    <div class="container">
-        <div class="sanphambanchay">
-            <h1 style="text-align: center;"><strong>SẢN PHẨM BÁN CHẠY</strong></h1>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh1.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT CAO CỔ KQ09</a>
-                    </div>
-                    <div class="gia">
-                        <strong>600.000Đ</strong> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh2.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT CỔ GỐI CAO CẤP GÓT NHỌN CELI 3 MÀU KQ200</a>
-                    </div>
-                    <div class="gia">
-                        <strong>690.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh3.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT NEVI CỔ CHỮ V MŨI NHỌN 2023 CC66</a>
-                    </div>
-                    <div class="gia">
-                        <strong>580.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh4.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT SWING-BOOT GỐI MIX ĐINH TÁN CC33</a>
-                    </div>
-                    <div class="gia">
-                        <strong>690.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="sanphamtrangchu">
-                <h1 style="text-align: center;"><strong>SẢN PHẨM CỦA CHÚNG TÔI</strong></h1>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh1.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT CAO CỔ KQ09</a>
-                    </div>
-                    <div class="gia">
-                        <strong>600.000Đ</strong> 
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh2.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT CỔ GỐI CAO CẤP GÓT NHỌN CELI 3 MÀU KQ200</a>
-                    </div>
-                    <div class="gia">
-                        <strong>690.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh3.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT NEVI CỔ CHỮ V MŨI NHỌN 2023 CC66</a>
-                    </div>
-                    <div class="gia">
-                        <strong>580.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh4.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT SWING-BOOT GỐI MIX ĐINH TÁN CC33</a>
-                    </div>
-                    <div class="gia">
-                        <strong>690.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh5.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT CAO CỔ KQ48</a>
-                    </div>
-                    <div class="gia">
-                        <strong>480.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh6.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                    Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT CAO CỔ CC202</a>
-                    </div>
-                    <div class="gia">
-                        <strong>580.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh7.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                     Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT CỔ CAO CC30</a>
-                    </div>
-                    <div class="gia">
-                        <strong>580.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="col-25">
-                <div class="column">
-                    <div class="column1">
-                        <div class="hinh">
-                            <a href="#"><img src="img/hinh8.jpg" alt=""></a>
-                            <div class="icon">
-                                <a href="#">
-                                     Thêm vào giỏ
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ten">
-                        <a href="#">BOOT CỔ CAO CC23</a>
-                    </div>
-                    <div class="gia">
-                        <strong>520.000Đ</strong>
-                    </div>
-                </div>
-            </div>
-                </div>
-        </div>
-<!--         
-        <aside>
-            <h1 style="text-align: center;">MENU</h1>
-            <ul class="vmenu">
-                <li>
-                    <a href="Dangky.html" target="page">Đăng ký</a>
-                </li>
-
-                <li>
-                    <a href="dangnhap.html" target="page">Đăng nhập</a>
-                </li>
-
-                <li>
-                    <a href="Bai1_Bai2_Bai3.html" target="page">Vị trí</a>
-                </li>
-
-                <li>
-                    <a href="Bai1_Bai2_Bai3.html" target="page">Video sản phẩm</a>
-                </li>
-
-                <li>
-                    <a href="ASM.html" target="page">Sản phẩm của chúng tôi</a>
-                </li>
-
-                <li>
-                    <a href="index.html" target="page">Blog mới nhất</a>
-                </li>
-            </ul>
-        </aside> -->
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="box">
-                <h3>LIÊN HỆ</h3>
-                <p>Mua hàng online: 035 3869 543</p>
-                <p>Liên hệ hợp tác Marketing: tiemgiayboot9x@gmail.com</p>
-                <p>Chăm sóc khách hàng: 035 3869 543</p>
-                <p>Thời gian làm việc: Thứ 2 đến thứ 7 từ 8h30 đến 17h30</p>
-                <p>Địa chỉ: Tất cả các chi nhánh hệ thống cửa hàng.</p>
-                <p>Copyright © 2023 <strong style="color: red;">TIEMGIAYBOOT</strong>. All rights reserved. Design by Nina Co.,Ltd</p>
-            </div>
-            <div class="box1">
-                <h4>CHÍNH SÁCH</h4>
-                <a href="#">Chính sách trả hàng</a><br><br>
-                <a href="#">Chính sách bảo hành</a><br><br>
-                <a href="#">Chính sách mua hàng</a><br><br>
-                <a href="#">Chính sách người dùng</a>
-            </div>
-            <div class="box2">
-                <h4>FANPAGE CỦA CHÚNG TÔI</h4>
-                <a href="#">Facebook</a>
-            </div>
-        </div>
-        
-    </footer>
-    <div class="box3">
-        <div class="tiem">
-            <a href="#">Về Tiệm giày Boot</a>
-        </div>
-        <div class="baomat">
-            <a href="#">Chính sách bảo mật thông tin</a>
-        </div>
-        <div class="thanhtoan">
-            <a href="#">Chính sách thanh toán</a>
-        </div>
-    </div>
-    <script src="https://uhchat.net/code.php?f=f3cef5"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
