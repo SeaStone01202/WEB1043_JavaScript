@@ -55,7 +55,7 @@ function checkUsernamePassword() {
   if (username === usernameCheck && password === passwordCheck) {
     doLogin = true;
     localStorage.setItem('isLogin', doLogin);
-    console.log(doLogin);
+    // console.log(doLogin);
     Swal.fire({
       icon: 'success',
       title: 'Success',

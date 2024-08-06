@@ -68,7 +68,7 @@
       </nav>
     </div>
 
-    <div id="center">
+    <!-- <div id="center">
       <h1>GIO HANG</h1>
       <table border="1" align="center" style="font-size: 2em; text-align: center;" id="hienthigiohang">
         <tr>
@@ -94,6 +94,32 @@
           <td><button>Thanh toan</button></td>
         </tr>
       </table>
+    </div> -->
+
+    <div id="center">
+      <h1>GIO HANG</h1>
+      <table border="1" align="center" style="font-size: 2em; text-align: center;" id="hienthigiohang">
+        <thead>
+          <tr>
+            <td>Tên</td>
+            <td>Hình</td>
+            <td>Giá</td>
+            <td>Số lượng</td>
+            <td>Thành tiền</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody id="cartItems">
+          <!-- Sản phẩm trong giỏ hàng sẽ được thêm vào đây -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" align="center">Tổng cộng: </td>
+            <td id="totalAmount">0</td>
+            <td><button onclick="checkout()">Thanh toán</button></td>
+          </tr>
+        </tfoot>
+      </table>
     </div>
 
     <div class="footer">
@@ -118,6 +144,8 @@
 
   <script src="/WEB1043_JavaScript/js/slider.js"></script>
   <script src="/WEB1043_JavaScript/js/index.js"></script>
+  <script src="/WEB1043_JavaScript/js/cart.js"></script>
+  <script src="/WEB1043_JavaScript/js/product.js"></script>
 </body>
 
 </html>
