@@ -1,0 +1,52 @@
+#center {
+    max-width: 600px;
+    margin: 0 auto; /* Giữa trang */
+    padding: 20px;
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    border-radius: 10px; /* Bo góc */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+h1 {
+    text-align: center; /* Căn giữa tiêu đề */
+    color: #333; /* Màu tiêu đề */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Xếp chồng các phần tử */
+}
+
+label {
+    margin-bottom: 5px; /* Khoảng cách dưới nhãn */
+    font-weight: bold; /* Đậm nhãn */
+    color: #555; /* Màu nhãn */
+}
+
+input {
+    padding: 10px; /* Khoảng cách bên trong */
+    margin-bottom: 15px; /* Khoảng cách dưới trường nhập */
+    border: 1px solid #ccc; /* Đường viền nhạt */
+    border-radius: 5px; /* Bo góc trường nhập */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+input:focus {
+    border-color: #60b19a; /* Màu viền khi tập trung */
+    outline: none; /* Ẩn viền ngoài */
+}
+
+button {
+    padding: 10px; /* Khoảng cách bên trong nút */
+    background-color: #60b19a; /* Màu nền nút */
+    color: white; /* Màu chữ nút */
+    border: none; /* Ẩn đường viền */
+    border-radius: 5px; /* Bo góc nút */
+    font-size: 16px; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+button:hover {
+    background-color: #4cae4f; /* Màu nền khi hover */
+}

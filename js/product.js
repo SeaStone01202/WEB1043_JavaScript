@@ -74,7 +74,7 @@ function checkLogin(productId) {
   }
 }
 
-let orders = [
+let orders = JSON.parse(localStorage.getItem('orders')) || [
   {
     orderId: 1,
     orderDate: "7/23/2024",
@@ -84,9 +84,8 @@ let orders = [
     userId: 1
   }
 ];
-localStorage.setItem('orders', JSON.stringify(orders));
 
-let orderDetails = [
+let orderDetails = JSON.parse(localStorage.getItem('orderDetails')) || [
   {
     orderDetailId: 1,
     orderId: 1,
@@ -120,8 +119,8 @@ function addToCart(productId) {
     return;
   }
 
-  let orders = JSON.parse(localStorage.getItem('orders')) || [];
-  let orderDetails = JSON.parse(localStorage.getItem('orderDetails')) || [];
+  // let orders = JSON.parse(localStorage.getItem('orders')) || [];
+  // let orderDetails = JSON.parse(localStorage.getItem('orderDetails')) || [];
 
   let currentOrder = orders.find(o => o.status === 'Pending');
   if (!currentOrder) {
@@ -205,6 +204,40 @@ function loadCart() {
 
   totalAmount.innerText = totalCart;
 }
+
+function removeFromCart(orderDetailId) {
+  let orders = JSON.parse(localStorage.getItem('orders')) || [];
+  let orderDetails = JSON.parse(localStorage.getItem('orderDetails')) || [];
+
+  // Tìm orderDetail theo orderDetailId
+  const orderDetailIndex = orderDetails.findIndex(od => od.orderDetailId === orderDetailId);
+  
+  if (orderDetailIndex > -1) {
+    // Xóa orderDetail khỏi orderDetails
+    orderDetails.splice(orderDetailIndex, 1);
+  }
+
+  // Cập nhật lại tổng số lượng cho đơn hàng
+  let currentOrder = orders.find(o => o.status === 'Pending');
+  if (currentOrder) {
+    currentOrder.totalAmount = orderDetails.filter(od => od.orderId === currentOrder.orderId)
+      .reduce((total, od) => total + od.totalPrice, 0);
+  }
+
+  // Cập nhật lại localStorage
+  localStorage.setItem('orders', JSON.stringify(orders));
+  localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+
+  // Cập nhật lại giỏ hàng trên giao diện
+  loadCart();
+
+  Swal.fire({
+    icon: 'success',
+    title: 'Success',
+    text: 'Sản phẩm đã được xóa khỏi giỏ hàng'
+  });
+}
+
 
 
 document.addEventListener("DOMContentLoaded", loadProduct);
