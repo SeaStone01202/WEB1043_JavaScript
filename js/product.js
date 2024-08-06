@@ -176,26 +176,26 @@ function loadCart() {
       return;
   }
 
-  let orderDetailsCart = JSON.parse(localStorage.getItem('orderDetails')) || [];
-  let ordersCart = JSON.parse(localStorage.getItem('orders')) || [];
-  let currentOrder = ordersCart.find(order => order.status === 'Pending');
+  let orderDetailsCart = JSON.parse(localStorage.getItem('orderDetails'));
+  let ordersCart = JSON.parse(localStorage.getItem('orders'));
+  let currentOrder = ordersCart.find(ordersCart => ordersCart.status === 'Pending');
 
   cartItems.innerHTML = ''; // Xóa nội dung cũ của bảng giỏ hàng
 
   if (currentOrder.totalAmount !== 1) {
-      orderDetailsCart.forEach(orderDetail => {
-          if (orderDetail.orderId === currentOrder.orderId) {
-              totalCart += orderDetail.totalPrice;
-              const product = products.find(p => p.id === orderDetail.productId);
-              if (product) {
+      orderDetailsCart.forEach(orderDetailCart => {
+          if (orderDetailCart.orderId === currentOrder.orderId) {
+              totalCart += orderDetailCart.totalPrice;
+              const productCart = products.find(p => p.id === orderDetailCart.productId);
+              if (productCart) {
                   let row = document.createElement('tr');
                   row.innerHTML = `
-                      <td>${orderDetail.productName}</td>
-                      <td><img src="${product.image}" alt="${orderDetail.productName}" width="50%"></td>
-                      <td>${orderDetail.price}</td>
-                      <td>${orderDetail.quantity}</td>
-                      <td>${orderDetail.totalPrice}</td>
-                      <td><button onclick="removeFromCart(${orderDetail.orderDetailId})">Xóa</button></td>
+                      <td>${orderDetailCart.productName}</td>
+                      <td><img src="${productCart.image}" alt="${orderDetailCart.productName}" width="50%"></td>
+                      <td>${orderDetailCart.price}</td>
+                      <td>${orderDetailCart.quantity}</td>
+                      <td>${orderDetailCart.totalPrice}</td>
+                      <td><button onclick="removeFromCart(${orderDetailCart.orderDetailId})">Xóa</button></td>
                   `;
                   cartItems.appendChild(row);
               }
